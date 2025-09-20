@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>thyWeather App</title>
+  <link rel="stylesheet" href="/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="vh-100 d-flex flex-column justify-content-between" style="background-image: url(/assets/images/cloud.avif); background-position: center; background-size: cover; background-repeat: no-repeat;">
+  <div id="displayName" class="" style="font-size: 1.3rem;"></div>
+  
+  <div class="container py-3">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="input-group input-group-lg shadow">
+          <input type="text" id="cityInput" class="form-control border-0" placeholder="🔍 Search city here">
+          <button class="btn btn-dark px-4" id="searchBtn">Go</button>
+          <span id="loader" class="d-none"></span>
+        </div>
+        <span id="displayError"></span>
+      </div>
+    </div>
+  </div>
+
+  <!--Weather Section -->
+  <div class="container-fluid flex-grow-1 d-flex align-items-center">
+    <div class="row w-100 g-4 justify-content-center" >
+      <h1 class="text-center text-dark w-75" id="message">Discover the weather condition in any location</h1>
+      <div class="col-md-4 d-flex align-items-center" id="weather-info">
+        
+      </div>
+      
+      <div class="col-md-7" >
+          <div class="row g-3" id="hourly-forecast">
+            
+          </div>
+      </div>
+      
+      
+
+          
+
+        
+
+    </div>
+  </div>
+
+<script src="./js/index.js"></script>
+</body>
+</html>

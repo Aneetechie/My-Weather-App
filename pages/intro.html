@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+</head>
+<body class="vh-100 d-flex align-items-center justify-content-center text-white" style="background-image: url(/assets/images/life.avif); background-position: center; background-repeat: no-repeat; background-size: cover;">
+
+  <div class="container text-center bg-dark w-50 py-4 rounded-3">
+    <div class="row justify-content-center">
+      <div class="col-11 col-sm-8 col-md-6 col-lg-5">
+        <h1 class="fw-bold display-5">Welcome! 😊</h1>
+        <p class="lead mb-4">We'd love to know your name before we start</p>
+        <input type="text" class="form-control form-control-lg text-center mb-3" id="inputValue"placeholder="Enter your name">
+        <div id="display-error" class="text-warning fw-bold mb-3"></div>
+        <a href="#" class="btn btn-light btn-lg fw-bold px-5 shadow-sm" id="submitBtn">Submit</a>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    document.getElementById('submitBtn').addEventListener('click', (e)=>{
+        e.preventDefault();
+
+        const inputValue = document.getElementById('inputValue').value.trim();
+        localStorage.setItem('inputValue', inputValue)
+
+        if (inputValue === '') {
+            document.getElementById('display-error').textContent = 'Please enter a valid name'
+        } else {
+            window.location.href = '../weather.html'
+        }
+    })
+  </script>
+</body>
+</html>
