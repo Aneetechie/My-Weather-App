@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>thyWeather App</title>
   <link rel="stylesheet" href="/bootstrap-5.3.8-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/weather.css">
 </head>
 
 <body class="vh-100 d-flex flex-column justify-content-between" style="background-image: url(/assets/images/cloud.avif); background-position: center; background-size: cover; background-repeat: no-repeat;">
   <div id="displayName" class="" style="font-size: 1.3rem;"></div>
   
-  <div class="container py-3">
+  <div class="container py-3" id="weather-container">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="input-group input-group-lg shadow">
@@ -25,9 +25,9 @@
   </div>
 
   <!--Weather Section -->
-  <div class="container-fluid flex-grow-1 d-flex align-items-center">
-    <div class="row w-100 g-4 justify-content-center" >
-      <h1 class="text-center text-dark w-75" id="message">Discover the weather condition in any location</h1>
+  <div class="container-fluid flex-grow-1 d-flex align-items-center" id="weatherDisplay">
+    <div class="row w-100 g-4 justify-content-center" id="WeatherSpace">
+      <h1 class="text-center m-0 p-0 text-dark w-75" id="message">Discover the weather condition in any location</h1>
       <div class="col-md-4 d-flex align-items-center" id="weather-info">
         
       </div>
@@ -37,16 +37,9 @@
             
           </div>
       </div>
-      
-      
-
-          
-
-        
-
     </div>
   </div>
 
-<script src="./js/index.js"></script>
+<script src="/js/weather.js"></script>
 </body>
 </html>

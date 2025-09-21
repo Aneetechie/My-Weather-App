@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - thyWeather</title>
+  <link rel="stylesheet" href="/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/index.css">
+</head>  
+<body class="d-flex align-items-center min-vh-100" style="background-image: url('/assets/images/cloud.avif'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-5">
+        <div class="card px-3 py-1  mx-2 my-1 shadow-lg border-0 rounded-4">
+          <div class="card-body">
+            <h1 class="text-center mb-1 fw-bold text-dark" style="font-size: 1.6rem;">Sign Up</h1><hr>
+            <h2 class="text-center mb-3 fw-bold text-dark" style="font-size: 1.3rem;">
+              Welcome to <span class="text-warning">thyWeather</span> 🌤️
+            </h2>
+            <p class="text-center text-muted mb-4">
+              Sign up to get real-time forecasts for anywhere in the world
+            </p>
+            <form id="form">
+              <div class="mb-3">
+                <div class="text-danger fw-bold" style="font-size: 0.9rem;"  id="fieldsError"></div>
+                <input type="text" class="form-control form-control-lg w-100 rounded-3 border border-primary" id="name" placeholder="Username">
+                <p class="text-end" style="font-size: 0.7rem;">username is case sensitive</p>
+                <div id="nameError"></div>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control form-control-lg rounded-3 border border-primary" id="email" placeholder="Email">
+                <div id="emailError"></div>
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control form-control-lg rounded-3 border border-primary" id="password" placeholder="Password">
+                <div id="passwordError"></div>
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control form-control-lg rounded-3 border border-primary" id="confirm-password" placeholder="Confirm Password">
+                <div class="fw-bold text-danger" style="font-size: 0.9rem;" id="confirmPasswordError"></div>
+              </div>
+              <button id="submitBtn" type="button" class="btn btn-warning w-100 py-2 rounded-3 fw-semibold">
+                Sign Up
+              </button>
+            </form>
+            <p class="text-center text-muted mt-4 mb-0" style="font-size: 0.9rem;">
+              Already have an account? 
+              <a href="/pages/login.html" class="text-primary fw-semibold">Log in</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/index.js"></script>
+</body>
+</html>
