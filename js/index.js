@@ -18,7 +18,7 @@ document.getElementById('submitBtn').addEventListener('click', (event)=>{
     let passwordError = document.getElementById('passwordError');
     if (password.length < 6) {
         passwordError.innerHTML = '';
-        passwordError.innerHTML = `<p>Password must be at least 6 characters</p>`;
+        passwordError.innerHTML = `<p class= "text-danger fw-bold" style = "font-size: 0.7rem;">Password must be at least 6 characters</p>`;
 
         return;
     }
@@ -26,7 +26,7 @@ document.getElementById('submitBtn').addEventListener('click', (event)=>{
         document.getElementById('confirmPasswordError').innerHTML = `<p>passwords do not match</p>`;
         return;
     }else{
-        window.location.href = '/pages/weather.html';
+        window.location.href = '/pages/login.html';
     }
 
     localStorage.setItem('inputValue', name);
